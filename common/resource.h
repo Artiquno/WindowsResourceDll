@@ -1,9 +1,9 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by Resource Library.rc
+// Used by Resource Only.rc
 //
-#define IDS_HELLO                       104
 #define IDS_GENERAL                     105
+#define IDS_HELLO                       110
 
 // Next default values for new objects
 // 

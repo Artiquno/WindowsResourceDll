@@ -39,7 +39,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -74,6 +74,12 @@
     <TargetName>resource_only</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.dll</TargetExt>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\rc</OutDir>
+    <TargetName>resource_only</TargetName>
+    <IncludePath>$(SolutionDir)common;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -95,6 +101,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <NoEntryPoint>true</NoEntryPoint>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,9 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cursor1.cur" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

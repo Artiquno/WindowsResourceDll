@@ -76,8 +76,10 @@
     <OutDir>$(SolutionDir)lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>RESOURCELIBRARY</TargetName>
+    <TargetName>resource_library</TargetName>
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)lib</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>RESOURCELIBRARY</TargetName>

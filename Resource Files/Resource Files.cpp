@@ -99,7 +99,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	WCHAR *text = (WCHAR *)LockResource(hHello);*/
 
 	WCHAR szHello[100];
-	LoadString(resourceLibrary, 110, szHello, 100);
+	LoadString(resourceLibrary, 110, szTitle, 100);
 
     // Perform application initialization:
     if (!InitInstance (hInstance, nCmdShow))

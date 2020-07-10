@@ -11,6 +11,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Resource Only", "Resource O
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResourceLib2", "ResourceLib2\ResourceLib2.vcxproj", "{262EF7D7-5331-490B-82D5-4968AEBB5951}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResourceOnly", "ResourceOnly", "{EFF98ECB-8462-4E17-A478-AF9ACEEB8F4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{EAE849CA-6CAE-48A9-A79B-97E6CA22762F}"
+	ProjectSection(SolutionItems) = preProject
+		common\resource.h = common\resource.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -54,6 +61,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF92E34C-BCF6-4F1F-8DC3-88968314D593} = {EFF98ECB-8462-4E17-A478-AF9ACEEB8F4A}
+		{262EF7D7-5331-490B-82D5-4968AEBB5951} = {EFF98ECB-8462-4E17-A478-AF9ACEEB8F4A}
+		{EAE849CA-6CAE-48A9-A79B-97E6CA22762F} = {EFF98ECB-8462-4E17-A478-AF9ACEEB8F4A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A540BBAE-6A80-456F-8CB9-B516BEA3D835}
